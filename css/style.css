@@ -16,9 +16,11 @@
     z-index: 11111111111;
     /* align-items: right; */
     /* justify-items: end; */
-    margin-left: 89%;
-    margin-top: 37%;
+    /* margin-left: 89%; */
+    margin-top: 3%;
 }
+
+
 /* IMAGES == GDSC== MERI KHUD KI EK == PING PNG  */
 
 body{
@@ -680,6 +682,7 @@ footer .copyright{
     border: none;
     outline: none;
     cursor: pointer;
+    display: none;
 }
 
 .hamberger img{
@@ -727,15 +730,18 @@ footer .copyright{
     font-size: 2rem;
 }
 
-@media (max-width:853px)
+@media (max-width:1024px)
 {
     header #main-nav
     {
         display: none;
     }
 
+        .hamberger{
+            display: block;
+        }
     .hero .left img{
-        width:260px
+        width:260px;
     }
     .hero .right h1{
         font-size: 3rem;
@@ -750,8 +756,8 @@ footer .copyright{
         
     }
 
-    section.about .about-me-image{
-        height: 360px;
+    section .abt > img{
+        height: 102px;
     }
 
         section.services .card-wrapper{
@@ -775,4 +781,92 @@ width: 11rem;
     transform: scale(2);
     transition: all .3s ease;
     z-index: 11;
+}
+
+@media (max-width:576px)
+{
+    .hero{
+        flex-direction: column;
+    }
+
+    header{
+        clip-path: polygon(0 0 , 100% 0 , 100% 100%, 69% 95%, 0 100%);
+        
+    }   
+
+    .hero.right{
+        position: absolute;
+        top: 250px;
+        padding: 0rem 1rem;
+        background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.9)) ;
+    }
+
+    .hero.left{
+        margin-top: -5rem;
+        margin-right: -9rem;
+        padding-bottom: 4rem;
+    }
+   
+    .about-inner-wrap{
+        flex-direction: column;
+    }
+  #align{
+      text-align: left;
+      justify-content: left;
+      align-items: left;
+  }
+
+        .about .right1{
+            text-align: center;
+            margin-top: 2rem;
+            /* padding:0 2rem; */
+            margin-left: 5rem;
+        }
+        .about .right1 .social{
+            justify-content: center;
+        }
+        section{
+            padding: 4rem 0;
+        }
+        section.services .card-wrapper{
+            grid-template-columns: repeat(1,1fr);
+            margin-top: 6rem;
+        }
+        section .freelancer h1{
+            line-height: 1.2;
+        }
+    section.freelancer{
+    clip-path: polygon(0 0 , 100% 0 , 100% 100%, 65% 88%, 0 100%);
+    padding-bottom: 8rem;
+}
+
+section.reviews .slider .slide{
+    padding: 0;
+
+}
+.section-heading + p{
+    margin-bottom: 3rem;
+}
+
+
+section.works .container .card-wrapper1{
+    grid-template-columns: repeat(1,1fr);
+}
+section.blog .card-wrapper2{
+    grid-template-columns: repeat(1,1fr);
+}
+section.blog{
+    clip-path: polygon(0 0 , 100% 0 , 100% 100%, 67% 97%, 0 100%);
+}
+
+
+section.contact .card-wrapper3{
+    grid-template-columns: repeat(1,1fr);
+}
+
+section.contact .input-wrap{
+    grid-template-columns: repeat(1,1fr);
+}
+      
+
 }
